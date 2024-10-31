@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.css">
+  <script src="https://kit.fontawesome.com/9666623c61.js" crossorigin="anonymous"></script>
+  <title>TaskLoop</title>
+</head>
+
+<body class="h-full">
+
+<header class="hidden lg:block fixed top-0 w-full">
+  <nav class="bg-fondocamps shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#" class="text-3xl font-bold text-secundari">TaskLoop</a>
+
+      <!-- Links de Navegació -->
+      <div class="flex space-x-8">
+        <a href="#" class="flex items-center space-x-2 text-secundari">
+          <i class="fa-solid fa-house text-xl"></i>
+          <span class="text-sm font-semibold">Inici</span>
+        </a>
+
+        <a href="#" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+          <i class="fa-solid fa-briefcase text-xl"></i>
+          <span class="text-sm font-semibold">Feines</span>
+        </a>
+
+        <a href="#" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+          <i class="fa-solid fa-heart text-xl"></i>
+          <span class="text-sm font-semibold">Favorits</span>
+        </a>
+
+        <a href="../src/Pages/profile.html" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+          <i class="fa-solid fa-user text-xl"></i>
+          <span class="text-sm font-semibold">Perfil</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="hidden lg:flex mt-24">
+  <!-- Search bar -->
+  <section class="w-2/3">
+    <div class="p-4 w-3/4 m-auto">
+      <div class="bg-fondocamps p-4 rounded-lg flex items-center space-x-2 shadow-md" onclick="openServices()">
+        <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+        <input type="text" placeholder="Cerca serveis" class="w-full focus:outline-none bg-fondocamps">
+      </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="p-4 w-3/4 m-auto">
+      <div class="relative bg-blue-100 rounded-lg overflow-hidden shadow-md">
+        <img src="/src/Assets/car_wash.jpg" alt="Car Wash" class="w-full h-100 object-contain">
+        <div class="absolute bottom-5 left-2 bg-secundari text-accentuacio py-1 px-2 rounded-3xl">
+          Reserva ara
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-4 py-1 rounded-lg">
+          50% DESC
+        </div>
+      </div>
+    </div>
+
+    <div class="p-4 w-3/4 m-auto mb-10">
+      <div class="p-4 bg-fondocamps rounded-md shadow-md">
+        <div class="flex justify-between items-center">
+          <h2 class="text-lg font-semibold">Recomanat per a tu</h2>
+          <a href="#" onclick="openWorkerModal()" class="text-sm text-secundari">Veure tots</a>
+        </div>
+        <!-- Ajust de graella responsiva per a tablet i escriptori -->
+        <div class="mt-2 flex space-x-4  md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-x-0 no-scrollbar">
+          <div class="bg-white p-4 rounded-lg w-48 md:w-auto">
+            <img src="/src/Assets/pf1.jpg" alt="Profile" class="w-full rounded-lg">
+            <div class="flex justify-between mt-2 items-center">
+              <p class="font-semibold text-base">Pere Pernils</p>
+              <p class="text-sm font-semibold text-gray-500">18€/hr</p>
+            </div>
+            <p class="text-sm text-secundari"><i class="fa-solid fa-star"></i> 4.5 (54 reviews)</p>
+            <p class="text-xs text-gray-400 flex items-center">
+              <i class="fa-solid fa-check-circle text-green-500 mr-1"></i> 5 treballs en cua
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded-lg w-48 md:w-auto">
+            <img src="/src/Assets/pf2.jpg" alt="Profile" class="w-full rounded-lg">
+            <div class="flex justify-between mt-2 items-center">
+              <p class="font-semibold text-base">Pere Pernils</p>
+              <p class="text-sm font-semibold text-gray-500">18€/hr</p>
+            </div>
+            <p class="text-sm text-secundari"><i class="fa-solid fa-star"></i> 4.5 (54 reviews)</p>
+            <p class="text-xs text-gray-400 flex items-center">
+              <i class="fa-solid fa-check-circle text-green-500 mr-1"></i> 5 treballs en cua
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="w-1/3 p-4">
+    <!-- Serveis destacats -->
+    <div class="p-4 bg-fondocamps rounded-md shadow-md w-3/4">
+      <div class="flex justify-between items-center">
+        <h2 class="text-lg font-semibold">Serveis destacats</h2>
+        <a onclick="openServicesModal()" href="#" class="text-sm text-secundari">Veure tots</a>
+      </div>
+      <!-- Ajust de graella responsiva per a tablet i escriptori -->
+      <div class="grid grid-cols-2 gap-2 mt-2 md:grid-cols-4 lg:grid-cols-6 overflow-x-auto md:overflow-hidden">
+        <div class="bg-fondocamps p-4 rounded-lg text-center">
+          <i class="fa-solid fa-broom text-2xl text-secundari"></i>
+          <p class="mt-2 text-sm">Neteja</p>
+        </div>
+        <div class="bg-fondocamps p-4 rounded-lg text-center">
+          <i class="fa-solid fa-wrench text-2xl text-secundari"></i>
+          <p class="mt-2 text-sm">Repara</p>
+        </div>
+        <div class="bg-fondocamps p-4 rounded-lg text-center">
+          <i class="fa-solid fa-paint-roller text-2xl text-secundari"></i>
+          <p class="mt-2 text-sm">Pintura</p>
+        </div>
+        <div class="bg-fondocamps p-4 rounded-lg text-center">
+          <i class="fa-solid fa-hammer text-2xl text-secundari"></i>
+          <p class="mt-2 text-sm">Desa</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Serveis destacats amb tags -->
+    <div class="p-4 bg-fondocamps rounded-md shadow-md mt-6 w-3/4">
+      <h2 class="text-lg font-semibold">Serveis destacats</h2>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <a href="#" class="bg-white px-4 py-2 rounded-xl border border-secundari text-sm text-gray-600">Rentat de cotxes</a>
+        <a href="#" class="bg-white px-4 py-2 rounded-xl border border-secundari text-sm text-gray-600">Aires Acondicionats</a>
+        <a href="#" class="bg-white px-4 py-2 rounded-xl border border-secundari text-sm text-gray-600">Jardiners</a>
+        <a href="#" class="bg-white px-4 py-2 rounded-xl border border-secundari text-sm text-gray-600">Netejadors professionals</a>
+      </div>
+    </div>
+  </aside>
+</main>
+
+
+
+<!-- Header -->
+<header class="bg-white p-4 flex justify-between items-center lg:hidden">
+  <div class="flex items-center space-x-2" onclick="openLocation()">
+    <i class="fa-solid fa-location-dot text-gray-600"></i>
+    <span class="text-gray-600 text-sm">Torelló, BCN</span>
+  </div>
+  <div>
+    <button class="p-2 bg-fondocamps rounded-full">
+      <i class="fa-regular fa-bell"></i>
+    </button>
+  </div>
+</header>
+
+<!-- Search Bar -->
+<div class="p-4 lg:hidden">
+  <div class="bg-fondocamps p-4 rounded-lg flex items-center space-x-2" onclick="openServices()">
+    <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+    <input type="text" placeholder="Cerca serveis" class="w-full focus:outline-none bg-fondocamps">
+  </div>
+</div>
+
+<!-- Banner -->
+<div class="p-4 lg:hidden">
+  <div class="relative bg-blue-100 rounded-lg overflow-hidden">
+    <img src="/src/Assets/car_wash.jpg" alt="Car Wash" class="w-full h-100 object-contain">
+    <div class="absolute bottom-5 left-2 bg-secundari text-accentuacio py-1 px-2 rounded-3xl">
+      Reserva ara
+    </div>
+    <div class="absolute top-2 right-2 bg-red-500 text-white px-4 py-1 rounded-lg">
+      50% DESC
+    </div>
+  </div>
+</div>
+
+<!-- Serveis destacats -->
+<div class="p-4 lg:hidden">
+  <div class="flex justify-between items-center">
+    <h2 class="text-lg font-semibold">Serveis destacats</h2>
+    <a onclick="openServicesModal()" href="#" class="text-sm text-secundari">Veure tots</a>
+  </div>
+  <!-- Ajust de graella responsiva per a tablet i escriptori -->
+  <div class="grid grid-cols-2 gap-2 mt-2 md:grid-cols-4 lg:grid-cols-6 overflow-x-auto md:overflow-hidden">
+    <div class="bg-fondocamps p-4 rounded-lg text-center">
+      <i class="fa-solid fa-broom text-2xl text-secundari"></i>
+      <p class="mt-2 text-sm">Neteja</p>
+    </div>
+    <div class="bg-fondocamps p-4 rounded-lg text-center">
+      <i class="fa-solid fa-wrench text-2xl text-secundari"></i>
+      <p class="mt-2 text-sm">Repara</p>
+    </div>
+    <div class="bg-fondocamps p-4 rounded-lg text-center">
+      <i class="fa-solid fa-paint-roller text-2xl text-secundari"></i>
+      <p class="mt-2 text-sm">Pintura</p>
+    </div>
+    <div class="bg-fondocamps p-4 rounded-lg text-center">
+      <i class="fa-solid fa-hammer text-2xl text-secundari"></i>
+      <p class="mt-2 text-sm">Desa</p>
+    </div>
+  </div>
+</div>
+
+<!-- Recomanat per a tu -->
+<div class="p-4 lg:hidden">
+  <div class="flex justify-between items-center">
+    <h2 class="text-lg font-semibold">Recomanat per a tu</h2>
+    <a href="#" onclick="openWorkerModal()" class="text-sm text-secundari">Veure tots</a>
+  </div>
+  <!-- Ajust de graella responsiva per a tablet i escriptori -->
+  <div class="mt-2 flex space-x-4 overflow-x-scroll md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-x-0 no-scrollbar">
+    <div class="bg-fondocamps p-4 rounded-lg w-48 md:w-auto">
+      <img src="/src/Assets/pf1.jpg" alt="Profile" class="w-full rounded-lg">
+      <div class="flex justify-between mt-2 items-center">
+        <p class="font-semibold text-base">Pere Pernils</p>
+        <p class="text-sm font-semibold text-gray-500">18€/hr</p>
+      </div>
+      <p class="text-sm text-secundari"><i class="fa-solid fa-star"></i> 4.5 (54 reviews)</p>
+      <p class="text-xs text-gray-400 flex items-center">
+        <i class="fa-solid fa-check-circle text-green-500 mr-1"></i> 5 treballs en cua
+      </p>
+    </div>
+    <div class="bg-fondocamps p-4 rounded-lg w-48 md:w-auto">
+      <img src="/src/Assets/pf2.jpg" alt="Profile" class="w-full rounded-lg">
+      <div class="flex justify-between mt-2 items-center">
+        <p class="font-semibold text-base">Pere Pernils</p>
+        <p class="text-sm font-semibold text-gray-500">18€/hr</p>
+      </div>
+      <p class="text-sm text-secundari"><i class="fa-solid fa-star"></i> 4.5 (54 reviews)</p>
+      <p class="text-xs text-gray-400 flex items-center">
+        <i class="fa-solid fa-check-circle text-green-500 mr-1"></i> 5 treballs en cua
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Serveis destacats amb tags -->
+<div class="p-4 mb-16 lg:hidden">
+  <h2 class="text-lg font-semibold">Serveis destacats</h2>
+  <div class="flex flex-wrap gap-2 mt-2">
+    <a href="#" class="bg-white px-4 py-2 rounded-xl border border-secundari text-sm text-gray-600">Rentat de cotxes</a>
+    <a href="#" class="bg-white px-4 py-2 rounded-xl border border-secundari text-sm text-gray-600">Aires Acondicionats</a>
+    <a href="#" class="bg-white px-4 py-2 rounded-xl border border-secundari text-sm text-gray-600">Jardiners</a>
+    <a href="#" class="bg-white px-4 py-2 rounded-xl border border-secundari text-sm text-gray-600">Netejadors professionals</a>
+  </div>
+</div>
+
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white p-4 flex justify-between items-center shadow-t lg:hidden">
+  <a href="#" class="flex flex-col items-center text-secundari">
+    <i class="fa-solid fa-house text-xl py-1 px-4 bg-fondocamps rounded-3xl"></i>
+    <span class="text-xs">Inici</span>
+  </a>
+  <a href="#" class="flex flex-col items-center text-gray-500">
+    <i class="fa-solid fa-briefcase text-xl"></i>
+    <span class="text-xs">Feines</span>
+  </a>
+  <a href="#" class="flex flex-col items-center text-gray-500">
+    <i class="fa-solid fa-heart text-xl"></i>
+    <span class="text-xs">Favorits</span>
+  </a>
+  <a href="../src/Pages/profile.html" class="flex flex-col items-center text-gray-500">
+    <i class="fa-solid fa-user text-xl"></i>
+    <span class="text-xs">Perfil</span>
+  </a>
+</nav>
+
+<!-- Modal de localització -->
+<div id="locationModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex flex-col items-center justify-start hidden z-50">
+  <div class="bg-fondocamps w-full rounded-none p-4">
+    <!-- Header del modal amb botó per tancar -->
+    <div class="flex items-center justify-between">
+      <button onclick="closeLocation()" class="text-gray-500 text-lg">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <h2 class="text-lg font-semibold">Localització</h2>
+      <span></span> <!-- Espaiador per alinear el títol al centre -->
+    </div>
+
+    <!-- Contingut del modal -->
+    <div class="mt-4 px-4">
+      <!-- Caixa de cerca -->
+      <div class="flex items-center bg-white rounded-md p-2 mb-4">
+        <input type="text" placeholder="Ubicació" class="flex-grow px-2 py-1 outline-none">
+        <button class="text-gray-500"><i class="fa-solid fa-times"></i></button>
+      </div>
+
+      <!-- Opció d'ubicació actual -->
+      <div class="flex items-center mt-4 text-secundari cursor-pointer">
+        <i class="fa-solid fa-location-arrow mr-2"></i>
+        <span>Ubicació actual</span>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white w-full h-full rounded-none p-4">
+    <div class="mt-4 px-4">
+      <!-- Opcions de localització -->
+      <div class="mt-4 space-y-2">
+        <div class="flex items-center py-3 border-b border-gray-300 cursor-pointer">
+          <i class="fa-solid fa-map-marker-alt mr-2 text-secundari"></i>
+          <span>Vic</span>
+        </div>
+        <div class="flex items-center py-3 border-b border-gray-300 cursor-pointer">
+          <i class="fa-solid fa-map-marker-alt mr-2 text-secundari"></i>
+          <span>Manlleu</span>
+        </div>
+        <div class="flex items-center py-3 border-b border-gray-300 cursor-pointer">
+          <i class="fa-solid fa-map-marker-alt mr-2 text-secundari"></i>
+          <span>Ripoll</span>
+        </div>
+        <div class="flex items-center py-3 border-b border-gray-300 cursor-pointer">
+          <i class="fa-solid fa-map-marker-alt mr-2 text-secundari"></i>
+          <span>Girona</span>
+        </div>
+        <div class="flex items-center py-3 cursor-pointer">
+          <i class="fa-solid fa-map-marker-alt mr-2 text-secundari"></i>
+          <span>Manresa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de cerca de serveis -->
+<div id="serviceModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex flex-col items-center justify-start hidden z-50">
+  <div class="w-full bg-fondocamps rounded-none">
+    <!-- Zona del títol amb fons personalitzat -->
+    <div class="bg-fondocamps p-4 flex items-center justify-between">
+      <button onclick="closeServiceSearch()" class="text-gray-500 text-lg">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <h2 class="text-gray-500 text-sm font-medium">Cerca de serveis</h2>
+      <span></span> <!-- Espaiador per alinear el títol al centre -->
+    </div>
+
+    <!-- Contingut del modal -->
+    <div class="p-4">
+      <!-- Caixa de cerca -->
+      <div class="flex items-center bg-white rounded-md p-2 mb-4">
+        <input type="text" placeholder="Reparació AC" class="flex-grow px-2 py-1 outline-none text-green-700">
+        <button class="text-green-700"><i class="fa-solid fa-times"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="w-full h-full bg-white rounded-none">
+    <div class="p-4">
+      <!-- Llista de serveis -->
+      <div class="mt-4 space-y-2">
+        <div class="flex items-center py-3 border-b border-gray-300 cursor-pointer text-green-700">
+          <span>Rentar de cotxes</span>
+        </div>
+        <div class="flex items-center py-3 border-b border-gray-300 cursor-pointer text-green-700">
+          <span>Reparació d'ordinadors</span>
+        </div>
+        <div class="flex items-center py-3 border-b border-gray-300 cursor-pointer text-green-700">
+          <span>Paletes</span>
+        </div>
+        <div class="flex items-center py-3 border-b border-gray-300 cursor-pointer text-green-700">
+          <span>Pintors</span>
+        </div>
+        <div class="flex items-center py-3 border-b border-gray-300 cursor-pointer text-green-700">
+          <span>Electricistes</span>
+        </div>
+        <div class="flex items-center py-3 border-b border-gray-300 cursor-pointer text-green-700">
+          <span>Netejadors professionals</span>
+        </div>
+        <div class="flex items-center py-3 border-b border-gray-300 cursor-pointer text-green-700">
+          <span>Jardiners</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Worker Modal -->
+<div id="workerModal" class="fixed inset-0 flex flex-col items-center justify-start hidden z-50">
+  <div class="bg-fondocamps w-full  rounded-none p-4 border-b border-terciari">
+    <!-- Back Arrow and Title -->
+    <div class="flex items-center justify-between">
+      <button onclick="closeWorkerModal()" class="text-terciari text-lg">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <h2 class="text-lg font-semibold text-terciari">Cercador treballadors</h2>
+      <span></span> <!-- Spacer for centering title -->
+    </div>
+
+    <!-- Search Bar and Filters -->
+    <div class="flex items-center space-x-2 my-4">
+      <!-- Search Bar -->
+      <div class="flex-grow flex items-center bg-white rounded-lg px-3 py-2">
+        <i class="fa-solid fa-magnifying-glass text-gray-500 mr-2"></i>
+        <input type="text" placeholder="Electricista" class="w-full focus:outline-none text-gray-700">
+        <button>
+          <i class="fa-solid fa-sliders text-terciari"></i>
+        </button>
+      </div>
+      <!-- Filter Button -->
+
+    </div>
+
+    <!-- Active Filters -->
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-secundari text-accentuacio px-3 py-1 rounded-full text-sm">Vic X</span>
+      <span class="bg-secundari text-accentuacio px-3 py-1 rounded-full text-sm">10€ - 50€/hr X</span>
+      <span class="bg-secundari text-accentuacio px-3 py-1 rounded-full text-sm">Fins a una setmana X</span>
+    </div>
+
+    <!-- Results Count -->
+    <p class="text-gray-500 text-sm mb-2">35 resultats per "Electricista"</p>
+  </div>
+  <div class="bg-white w-full h-full rounded-none">
+    <!-- Worker Cards -->
+    <div class="">
+      <!-- Worker Card Example -->
+      <div class="flex flex-col p-4 ">
+        <a href="../src/Pages/worker_profile.html">
+          <div class="flex items-start space-x-4  ">
+            <img src="/src/Assets/pf1.jpg" alt="Profile" class="w-28 h-24 rounded-md">
+            <div class=" w-full">
+              <div class="flex justify-between">
+                <h3 class="text-lg font-semibold text-gray-800">Pere Pernils</h3>
+                <p class="text-sm font-semibold text-gray-500">18€/hr</p>
+              </div>
+              <p class="text-sm text-green-500 flex items-center mt-1">
+                <i class="fa-solid fa-star mr-1"></i> 4.5 (4 reviews)
+              </p>
+              <p class="text-xs text-gray-400 flex items-center mt-1">
+                <i class="fa-solid fa-check-circle text-green-500 mr-1"></i> 5 treballs en cua
+              </p>
+            </div>
+          </div>
+          <div class="w-full">
+            <p class="text-gray-600 text-sm mt-2">
+              Especialitzat en la instal·lació i manteniment de sistemes elèctrics residencials, comercials i
+              industrials,
+              assegurant una distribució eficient i segura de l'energia elèctrica.
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <hr class="bg-terciari ">
+
+      <div class="flex flex-col p-4 ">
+        <div class="flex items-start space-x-4  ">
+          <img src="/src/Assets/pf1.jpg" alt="Profile" class="w-28 h-24 rounded-md">
+          <div class=" w-full">
+            <div class="flex justify-between">
+              <h3 class="text-lg font-semibold text-gray-800">Pere Pernils</h3>
+              <p class="text-sm font-semibold text-gray-500">18€/hr</p>
+            </div>
+            <p class="text-sm text-green-500 flex items-center mt-1">
+              <i class="fa-solid fa-star mr-1"></i> 4.5 (4 reviews)
+            </p>
+            <p class="text-xs text-gray-400 flex items-center mt-1">
+              <i class="fa-solid fa-check-circle text-green-500 mr-1"></i> 5 treballs en cua
+            </p>
+          </div>
+        </div>
+        <div class="w-full">
+          <p class="text-gray-600 text-sm mt-2">
+            Especialitzat en la instal·lació i manteniment de sistemes elèctrics residencials, comercials i industrials,
+            assegurant una distribució eficient i segura de l'energia elèctrica.
+          </p>
+        </div>
+      </div>
+
+      <hr class="bg-terciari ">
+
+      <div class="flex flex-col p-4 ">
+        <div class="flex items-start space-x-4  ">
+          <img src="/src/Assets/pf1.jpg" alt="Profile" class="w-28 h-24 rounded-md">
+          <div class=" w-full">
+            <div class="flex justify-between">
+              <h3 class="text-lg font-semibold text-gray-800">Pere Pernils</h3>
+              <p class="text-sm font-semibold text-gray-500">18€/hr</p>
+            </div>
+            <p class="text-sm text-green-500 flex items-center mt-1">
+              <i class="fa-solid fa-star mr-1"></i> 4.5 (4 reviews)
+            </p>
+            <p class="text-xs text-gray-400 flex items-center mt-1">
+              <i class="fa-solid fa-check-circle text-green-500 mr-1"></i> 5 treballs en cua
+            </p>
+          </div>
+        </div>
+        <div class="w-full">
+          <p class="text-gray-600 text-sm mt-2">
+            Especialitzat en la instal·lació i manteniment de sistemes elèctrics residencials, comercials i industrials,
+            assegurant una distribució eficient i segura de l'energia elèctrica.
+          </p>
+        </div>
+      </div>
+
+      <hr class="bg-terciari ">
+      <!-- Additional Worker Cards can be added here -->
+    </div>
+  </div>
+</div>
+
+<!-- Services Modal -->
+<div id="servicesModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex flex-col items-center justify-start hidden z-50">
+  <!-- Modal Header -->
+  <div class="bg-fondocamps w-full rounded-none p-4">
+    <div class="flex items-center justify-between">
+      <button onclick="closeServicesModal()" class="text-gray-500 text-lg">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <h2 class="text-lg font-semibold">All Services</h2>
+      <span></span> <!-- Spacer to center the title -->
+    </div>
+    <h3 class="text-sm font-semibold text-terciari mt-4">Featured Tasks</h3>
+  </div>
+
+  <!-- Modal Content -->
+  <div class="bg-white w-full h-full pt-6">
+    <!-- Featured Tasks Section -->
+
+    <div class="grid grid-cols-2 gap-6">
+      <!-- Task Item -->
+      <div class="flex flex-col items-center space-y-2">
+        <div class="bg-fondocamps p-3 rounded-full">
+          <i class="fa-solid fa-couch text-terciari text-xl"></i>
+        </div>
+        <span class="text-xs font-semibold text-gray-700">Furniture Assembly</span>
+      </div>
+      <div class="flex flex-col items-center space-y-2">
+        <div class="bg-fondocamps p-3 rounded-full">
+          <i class="fa-solid fa-tv text-terciari text-xl"></i>
+        </div>
+        <span class="text-xs font-semibold text-gray-700">TV Mounting</span>
+      </div>
+      <div class="flex flex-col items-center space-y-2">
+        <div class="bg-fondocamps p-3 rounded-full">
+          <i class="fa-solid fa-hammer text-terciari text-xl"></i>
+        </div>
+        <span class="text-xs font-semibold text-gray-700">Home Repairs</span>
+      </div>
+      <div class="flex flex-col items-center space-y-2">
+        <div class="bg-fondocamps p-3 rounded-full">
+          <i class="fa-solid fa-truck text-terciari text-xl"></i>
+        </div>
+        <span class="text-xs font-semibold text-gray-700">Help Moving</span>
+      </div>
+      <div class="flex flex-col items-center space-y-2">
+        <div class="bg-fondocamps p-3 rounded-full">
+          <i class="fa-solid fa-dumbbell text-terciari text-xl"></i>
+        </div>
+        <span class="text-xs font-semibold text-gray-700">Heavy Lifting</span>
+      </div>
+      <div class="flex flex-col items-center space-y-2">
+        <div class="bg-fondocamps p-3 rounded-full">
+          <i class="fa-solid fa-broom text-terciari text-xl"></i>
+        </div>
+        <span class="text-xs font-semibold text-gray-700">Home Cleaning</span>
+      </div>
+      <div class="flex flex-col items-center space-y-2">
+        <div class="bg-fondocamps p-3 rounded-full">
+          <i class="fa-solid fa-wrench text-terciari text-xl"></i>
+        </div>
+        <span class="text-xs font-semibold text-gray-700">Plumber</span>
+      </div>
+      <div class="flex flex-col items-center space-y-2">
+        <div class="bg-fondocamps p-3 rounded-full">
+          <i class="fa-solid fa-bolt text-terciari text-xl"></i>
+        </div>
+        <span class="text-xs font-semibold text-gray-700">Electrician</span>
+      </div>
+      <div class="flex flex-col items-center space-y-2">
+        <div class="bg-fondocamps p-3 rounded-full">
+          <i class="fa-solid fa-vacuum text-terciari text-xl"></i>
+        </div>
+        <span class="text-xs font-semibold text-gray-700">Vacuum Cleaner</span>
+      </div>
+      <div class="flex flex-col items-center space-y-2">
+        <div class="bg-fondocamps p-3 rounded-full">
+          <i class="fa-solid fa-coffee text-terciari text-xl"></i>
+        </div>
+        <span class="text-xs font-semibold text-gray-700">Coffee Maker</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- JavaScript per obrir i tancar els modals -->
+<script>
+  function openLocation() {
+    document.getElementById("locationModal").classList.remove("hidden");
+  }
+
+  function closeLocation() {
+    document.getElementById("locationModal").classList.add("hidden");
+  }
+  function openServices() {
+    document.getElementById("serviceModal").classList.remove("hidden");
+  }
+
+  function closeServiceSearch() {
+    document.getElementById("serviceModal").classList.add("hidden");
+  }
+
+  function openWorkerModal() {
+    document.getElementById("workerModal").classList.remove("hidden");
+  }
+
+  function closeWorkerModal() {
+    document.getElementById("workerModal").classList.add("hidden");
+  }
+
+  function openServicesModal() {
+    document.getElementById('servicesModal').classList.remove('hidden');
+  }
+
+  function closeServicesModal() {
+    document.getElementById('servicesModal').classList.add('hidden');
+  }
+</script>
+</body>
+</html>
