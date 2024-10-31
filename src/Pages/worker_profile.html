@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="https://kit.fontawesome.com/9666623c61.js" crossorigin="anonymous"></script>
+    <title>TL - WorkerProfile</title>
+</head>
+<body class="h-full">
+
+<header class="hidden lg:block fixed top-0 w-full">
+    <nav class="bg-fondocamps shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="../../public/index.html" class="text-3xl font-bold text-secundari">TaskLoop</a>
+
+            <!-- Links de Navegació -->
+            <div class="flex space-x-8">
+                <a href="../../public/index.html" class="flex items-center space-x-2 text-secundari">
+                    <i class="fa-solid fa-house text-xl"></i>
+                    <span class="text-sm font-semibold">Inici</span>
+                </a>
+
+                <a href="#" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+                    <i class="fa-solid fa-briefcase text-xl"></i>
+                    <span class="text-sm font-semibold">Feines</span>
+                </a>
+
+                <a href="#" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+                    <i class="fa-solid fa-heart text-xl"></i>
+                    <span class="text-sm font-semibold">Favorits</span>
+                </a>
+
+                <a href="profile.html" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+                    <i class="fa-solid fa-user text-xl"></i>
+                    <span class="text-sm font-semibold">Perfil</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="hidden lg:flex mt-24 mb-10">
+    <!-- Profile Section -->
+    <section class="bg-white p-4 w-2/3 ">
+        <div class="flex items-center justify-between w-3/4 m-auto">
+            <img src="../Assets/pf1.jpg" alt="Profile Image" class="w-2/4 rounded-md">
+            <div class="self-start">
+                <h3 class="text-3xl text-terciari font-semibold">Dianne Russell</h3>
+
+                <p class="text-terciari text-lg flex justify-between">Plumber <span class="text-2xl text-terciari"><strong>$18</strong>/hr</span></p>
+                <div class="flex items-center text-md text-secundari mt-1">
+                    <i class="fa-solid fa-check mr-2"></i>
+                    <span>5 treballs en cua</span>
+                </div>
+                <div class="flex flex-col  justify-between mt-2 gap-4">
+                    <!-- Rating Section -->
+                    <div class="flex items-center justify-between bg-fondocamps rounded-md py-3 px-4 w-full shadow-md">
+                        <div class="mr-4">
+                            <i class="fa-solid fa-star text-accentuacio ml-2"></i>
+                            <i class="fa-solid fa-star text-accentuacio ml-2"></i>
+                            <i class="fa-solid fa-star text-accentuacio ml-2"></i>
+                            <i class="fa-solid fa-star text-accentuacio ml-2"></i>
+                            <i class="fa-solid fa-star text-accentuacio ml-2"></i>
+                        </div>
+                        <span class="text-secundari font-semibold text-lg">4.5</span>
+
+                    </div>
+                    <!-- Projects Section -->
+                    <div class="flex flex-col items-center justify-center bg-fondocamps rounded-md py-3 px-4 w-full shadow-md">
+                        <span class="text-secundari text-xl font-semibold">Projectes</span>
+                        <span class="text-secundari text-xl font-semibold">50</span>
+                        <i class="fa-regular fa-folder text-secundari text-3xl mt-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6 w-3/4 text-justify bg-fondocamps p-4 rounded-md shadow-md m-auto ">
+            <h4 class="text-lg font-semibold">Habilitats i experiència</h4>
+            <p class="text-gray-600 mt-2 text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel neque purus. Integer vitae ante vel lorem dictum dignissim rhoncus eu ex. Duis sit amet nunc pharetra, maximus elit eget, fermentum turpis. Integer consectetur arcu quam, non eleifend nisi fermentum at. Nunc iaculis, tortor nec placerat feugiat, enim nibh fringilla enim, quis tincidunt nulla purus sit amet mauris. Cras ac nisl ligula. Vestibulum non faucibus mauris. Aliquam sagittis diam et lacinia mollis. Pellentesque rhoncus non dolor non fringilla. Nulla mollis dui ex. Suspendisse at lorem ac eros vestibulum facilisis a sed dui. Nulla faucibus eros eu tortor blandit sodales. Sed ipsum dui, elementum at commodo ac, porttitor eu erat.
+                <br><br>
+                Etiam laoreet odio in nisl finibus volutpat. Praesent non tellus malesuada, blandit leo vel, suscipit elit. Etiam quis justo vulputate, ullamcorper quam ac, venenatis turpis. Maecenas volutpat nisi non arcu posuere interdum. Vestibulum semper libero eros, hendrerit laoreet lectus consectetur vel. Aliquam elit ligula, luctus nec malesuada vel, rhoncus vitae est. Etiam ornare consectetur metus, at aliquam neque ultrices eu. Aenean eleifend, sem quis posuere posuere, purus mi consectetur mi, eu egestas nibh ante et felis. Integer rutrum nunc et volutpat fermentum. Pellentesque porta pharetra mauris, eget pharetra quam gravida sit amet. In nec vehicula ipsum. Ut feugiat tellus nulla, ut eleifend odio ultrices ac. Vestibulum lobortis, ante sed malesuada sodales, arcu tortor porta tellus, pellentesque lacinia orci enim cursus odio. Duis non rhoncus ex. Phasellus sodales maximus diam.
+            </p>
+        </div>
+
+        <!-- Reviews Section -->
+        <section class="mt-6 p-4 bg-fondocamps w-3/4 rounded-md shadow-md m-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h4 class="text-lg font-semibold mb-4 text-terciari">Ressenyes</h4>
+                <a href="#" class="text-green-600 text-sm font-semibold">Veure tot</a>
+            </div>
+            <div class="space-y-4">
+                <!-- Review 1 -->
+                <div>
+                    <div class="flex items-center  justify-between">
+                        <div class="flex items-center space-x-4">
+                            <img src="../Assets/pf2.jpg" alt="Reviewer Image" class="w-10 h-10 rounded-full">
+                            <div>
+                                <h5 class="font-semibold">Ginny Oslin</h5>
+                                <p class="text-gray-500 text-sm">Fa un dia</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-2 text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo.
+                    </p>
+                </div>
+
+                <hr class="bg-terciari"/>
+
+                <!-- Review 2 -->
+                <div> <!-- Fixed this div (was missing closing tag) -->
+                    <div class="flex items-center  justify-between">
+                        <div class="flex items-center space-x-4">
+                            <img src="../Assets/pf2.jpg" alt="Reviewer Image" class="w-10 h-10 rounded-full">
+                            <div>
+                                <h5 class="font-semibold">Albert Flores</h5> <!-- Changed name to match image in example -->
+                                <p class="text-gray-500 text-sm">Fa un dia</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-2 text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo.
+                    </p>
+                </div>
+
+                <hr class="bg-terciari"/>
+
+                <!-- Review 2 -->
+                <div> <!-- Fixed this div (was missing closing tag) -->
+                    <div class="flex items-center  justify-between">
+                        <div class="flex items-center space-x-4">
+                            <img src="../Assets/pf2.jpg" alt="Reviewer Image" class="w-10 h-10 rounded-full">
+                            <div>
+                                <h5 class="font-semibold">Albert Flores</h5> <!-- Changed name to match image in example -->
+                                <p class="text-gray-500 text-sm">Fa un dia</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                            <i class="fa-solid fa-star text-accentuacio"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-2 text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo.
+                    </p>
+                </div><!-- Added missing closing div here -->
+            </div>
+        </section>
+    </section>
+
+    <aside class="w-1/3">
+        <section class="mt-6 flex items-center bg-white p-4 w-3/4 m-auto ">
+            <button onclick="openPickModal()" class="ml-auto bg-secundari text-white py-2 px-6 rounded-full font-semibold w-full">Seleccionar Treballador</button>
+        </section>
+
+        <!-- Recent Projects Section -->
+        <section class="my-6 p-4 w-3/4 m-auto ">
+            <div class="bg-fondocamps p-4 rounded-md shadow-md m-auto">
+                <div class="flex justify-between items-center mb-4">
+                    <h4 class="text-lg font-semibold text-terciari">Projectes recents</h4>
+                    <a href="#" class="text-secundari text-sm font-semibold">Veure tot</a>
+                </div>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class=" p-4 rounded-lg ">
+                        <img src="../Assets/project1.jpg" alt="Project Image"
+                             class="w-full h-24 object-cover rounded-md mb-2">
+                        <h5 class="font-semibold text-sm text-terciari">Local Restaurant Chain</h5>
+                    </div>
+                    <div class=" p-4 rounded-lg ">
+                        <img src="../Assets/project1.jpg" alt="Project Image"
+                             class="w-full h-24 object-cover rounded-md mb-2">
+                        <h5 class="font-semibold text-sm text-terciari">Bathroom Remodel</h5>
+                    </div>
+                    <div class=" p-4 rounded-lg ">
+                        <img src="../Assets/project1.jpg" alt="Project Image"
+                             class="w-full h-24 object-cover rounded-md mb-2">
+                        <h5 class="font-semibold text-sm text-terciari">Commercial Kitchen Plumbing</h5>
+                    </div>
+                    <div class=" p-4 rounded-lg ">
+                        <img src="../Assets/project1.jpg" alt="Project Image"
+                             class="w-full h-24 object-cover rounded-md mb-2">
+                        <h5 class="font-semibold text-sm text-terciari">Commercial Plumbing System Design</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </aside>
+</main>
+
+<header class="flex items-center justify-between p-4 bg-fondocamps lg:hidden">
+    <a href="../../public/index.html" class="text-terciari text-lg">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <h2 class="text-lg text-terciari font-semibold">Perfil Treballador</h2>
+    <span></span>
+</header>
+
+<main class="lg:hidden">
+    <!-- Profile Section -->
+    <section class="bg-white p-4">
+        <div class="flex items-center space-x-4">
+            <img src="../Assets/pf1.jpg" alt="Profile Image" class="w-2/4 rounded-md">
+            <div>
+                <h3 class="text-xl text-terciari font-semibold">Dianne Russell</h3>
+                <p class="text-terciari">Plumber</p>
+                <div class="flex items-center text-sm text-secundari mt-1">
+                    <i class="fa-solid fa-check mr-2"></i>
+                    <span>5 treballs en cua</span>
+                </div>
+                <div class="flex items-stretch justify-between mt-2 gap-2">
+                    <!-- Rating Section -->
+                    <div class="flex items-center justify-center bg-fondocamps rounded-md py-3 px-4 w-1/2">
+                        <span class="text-secundari font-semibold text-lg">4.5</span>
+                        <i class="fa-solid fa-star text-accentuacio ml-2"></i>
+                    </div>
+                    <!-- Projects Section -->
+                    <div class="flex flex-col items-center justify-center bg-fondocamps rounded-md py-3 px-4 w-1/2">
+                        <span class="text-secundari text-xs font-semibold">Projectes</span>
+                        <span class="text-secundari text-xs font-semibold">50</span>
+                        <i class="fa-regular fa-folder text-secundari text-sm mt-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6">
+            <h4 class="text-lg font-semibold">Habilitats i experiència</h4>
+            <p class="text-gray-600 mt-2 text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis, mauris sit amet euismod pharetra.
+            </p>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="mt-6 p-4 bg-fondocamps">
+        <div class="flex justify-between items-center mb-4">
+            <h4 class="text-lg font-semibold mb-4 text-terciari">Ressenyes</h4>
+            <a href="#" class="text-green-600 text-sm font-semibold">Veure tot</a>
+        </div>
+        <div class="space-y-4">
+            <!-- Review 1 -->
+            <div>
+                <div class="flex items-center  justify-between">
+                    <div class="flex items-center space-x-4">
+                        <img src="../Assets/pf2.jpg" alt="Reviewer Image" class="w-10 h-10 rounded-full">
+                        <div>
+                            <h5 class="font-semibold">Ginny Oslin</h5>
+                            <p class="text-gray-500 text-sm">Fa un dia</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                    </div>
+                </div>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo.
+                </p>
+            </div>
+
+            <hr class="bg-terciari"/>
+
+            <!-- Review 2 -->
+            <div> <!-- Fixed this div (was missing closing tag) -->
+                <div class="flex items-center  justify-between">
+                    <div class="flex items-center space-x-4">
+                        <img src="../Assets/pf2.jpg" alt="Reviewer Image" class="w-10 h-10 rounded-full">
+                        <div>
+                            <h5 class="font-semibold">Albert Flores</h5> <!-- Changed name to match image in example -->
+                            <p class="text-gray-500 text-sm">Fa un dia</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                    </div>
+                </div>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo.
+                </p>
+            </div>
+
+            <hr class="bg-terciari"/>
+
+            <!-- Review 2 -->
+            <div> <!-- Fixed this div (was missing closing tag) -->
+                <div class="flex items-center  justify-between">
+                    <div class="flex items-center space-x-4">
+                        <img src="../Assets/pf2.jpg" alt="Reviewer Image" class="w-10 h-10 rounded-full">
+                        <div>
+                            <h5 class="font-semibold">Albert Flores</h5> <!-- Changed name to match image in example -->
+                            <p class="text-gray-500 text-sm">Fa un dia</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                        <i class="fa-solid fa-star text-accentuacio"></i>
+                    </div>
+                </div>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo.
+                </p>
+            </div><!-- Added missing closing div here -->
+        </div>
+    </section>
+
+    <!-- Price and Button Section -->
+    <section class="mt-6 flex items-center bg-white p-4 w-full fixed bottom-0">
+        <span class="text-2xl text-terciari"><strong>$18</strong>/hr</span>
+        <button onclick="openPickModal()" class="ml-auto bg-secundari text-white py-2 px-6 rounded-full font-semibold">Seleccionar Treballador</button>
+    </section>
+
+    <!-- Recent Projects Section -->
+    <section class="my-6 p-4">
+        <div class="flex justify-between items-center mb-4">
+            <h4 class="text-lg font-semibold text-terciari">Projectes recents</h4>
+            <a href="#" class="text-secundari text-sm font-semibold">Veure tot</a>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg ">
+                <img src="../Assets/project1.jpg" alt="Project Image" class="w-full h-24 object-cover rounded-md mb-2">
+                <h5 class="font-semibold text-sm text-terciari">Local Restaurant Chain</h5>
+            </div>
+            <div class="bg-white p-4 rounded-lg ">
+                <img src="../Assets/project1.jpg" alt="Project Image" class="w-full h-24 object-cover rounded-md mb-2">
+                <h5 class="font-semibold text-sm text-terciari">Bathroom Remodel</h5>
+            </div>
+            <div class="bg-white p-4 rounded-lg ">
+                <img src="../Assets/project1.jpg" alt="Project Image" class="w-full h-24 object-cover rounded-md mb-2">
+                <h5 class="font-semibold text-sm text-terciari">Commercial Kitchen Plumbing</h5>
+            </div>
+            <div class="bg-white p-4 rounded-lg ">
+                <img src="../Assets/project1.jpg" alt="Project Image" class="w-full h-24 object-cover rounded-md mb-2">
+                <h5 class="font-semibold text-sm text-terciari">Commercial Plumbing System Design</h5>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+<!-- Pick Modal at the Bottom -->
+<div id="pickModal" class="fixed bottom-0 left-0 w-full z-50 p-4 bg-white shadow-lg rounded-t-lg hidden">
+    <div class="flex flex-col space-y-3 w-1/2 m-auto">
+        <!-- Date Selection -->
+        <div onclick="openDateModal()" class="flex items-center justify-start bg-fondocamps rounded-md px-4 py-2 gap-4">
+            <i class="fa-regular fa-calendar text-terciari"></i>
+            <span class="text-terciari">Demà</span>
+        </div>
+
+        <!-- Time Selection -->
+        <div onclick="openTimeModal()" class="flex items-center justify-start bg-fondocamps rounded-md px-4 py-2 gap-4">
+            <i class="fa-regular fa-clock text-terciari"></i>
+            <span class="text-terciari">8.30 AM</span>
+        </div>
+
+        <!-- Confirm Button -->
+        <a href="task_details.html" class="bg-secundari text-white py-2 rounded-full text-center font-semibold">
+            Selecciona data i hora
+        </a>
+    </div>
+</div>
+
+<div id="datePickerModal" class="fixed inset-0 flex items-center justify-center hidden z-50">
+    <div class="bg-green-50 rounded-2xl shadow-lg w-11/12 max-w-sm p-6">
+        <!-- Modal Header -->
+        <div class="text-left">
+            <h3 class="text-sm font-semibold text-gray-600">Select date</h3>
+        </div>
+
+        <!-- Date Display -->
+        <div class="flex items-center justify-between mt-2 mb-4">
+            <div class="text-3xl font-semibold text-gray-800">Mon, Aug 17</div>
+            <i class="fa-solid fa-pen text-gray-500"></i>
+        </div>
+
+        <!-- Calendar Section -->
+        <div class="border-t border-b border-gray-200 py-4">
+            <!-- Month and Year Selector -->
+            <div class="flex items-center justify-between mb-4">
+                <button class="text-gray-600">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <span class="text-gray-800 font-semibold">August 2023</span>
+                <button class="text-gray-600">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Calendar Grid -->
+            <div class="grid grid-cols-7 gap-2 text-center text-gray-600">
+                <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                <!-- Example days (you could dynamically generate these if using JavaScript) -->
+                <span class="text-gray-300">30</span><span class="text-gray-300">31</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+                <span>13</span><span>14</span><span>15</span><span>16</span>
+                <span class="bg-green-600 text-white rounded-full w-6 h-6 mx-auto">17</span> <!-- Selected Day -->
+                <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+                <span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-between mt-6">
+            <button onclick="closeDateModal()" class="text-gray-600 font-semibold">Cancel</button>
+            <button onclick="closeDateModal()" class="text-green-600 font-semibold">OK</button>
+        </div>
+    </div>
+</div>
+
+<!-- Time Picker Modal -->
+<div id="timePickerModal" class="fixed inset-0 flex items-center justify-center hidden z-50">
+    <div class="bg-green-50 rounded-2xl shadow-lg w-11/12 max-w-sm p-6 relative">
+        <!-- Modal Header -->
+        <div class="text-left mb-4">
+            <h3 class="text-sm font-semibold text-gray-600">Select time</h3>
+        </div>
+
+        <!-- Time Display with AM/PM Toggle -->
+        <div class="flex items-center justify-center space-x-2 text-5xl font-semibold text-gray-800 mb-6">
+            <span id="hourDisplay">07</span>
+            <span>:</span>
+            <span id="minuteDisplay">00</span>
+            <div class="flex flex-col ml-4">
+                <button id="amButton" class="px-2 py-1 rounded-md text-xs font-semibold text-white bg-green-700">AM</button>
+                <button id="pmButton" class="px-2 py-1 rounded-md text-xs font-semibold text-gray-600 bg-transparent hover:bg-gray-200">PM</button>
+            </div>
+        </div>
+
+        <!-- Circular Clock Face for Hour Selection -->
+        <div class="relative h-56 w-56 mx-auto">
+            <!-- Center Circle with Selected Hour -->
+            <div class="absolute top-1/2 left-1/2 bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold transform -translate-x-1/2 -translate-y-1/2">
+                7
+            </div>
+
+            <!-- Hour Pointer (Dynamic) -->
+            <div id="hourPointer" class="absolute h-20 w-1 bg-green-700 transform origin-bottom" style="top: 30%; left: 50%; transform: rotate(210deg);"></div>
+
+            <!-- Clock Hour Numbers Positioned Around Circle -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: -80px; left: 0;">12</div>
+                <div class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: -55px; left: 60px;">1</div>
+                <div class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: -20px; left: 80px;">2</div>
+                <div class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: 20px; left: 60px;">3</div>
+                <div class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: 55px; left: 0;">4</div>
+                <div class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: 20px; left: -60px;">5</div>
+                <div class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: -20px; left: -80px;">6</div>
+                <div class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: -55px; left: -60px;">7</div>
+                <div class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: -80px; left: 0;">8</div>
+                <div class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: -55px; left: 60px;">9</div>
+                <div class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: -20px; left: 80px;">10</div>
+                <div class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: 20px; left: 60px;">11</div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-between mt-6">
+            <button onclick="closeTimeModal()" class="text-gray-600 font-semibold">Cancel</button>
+            <button onclick="closeTimeModal()" class="text-green-600 font-semibold">OK</button>
+        </div>
+    </div>
+</div>
+
+<div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+<script>
+    function openPickModal() {
+        document.getElementById('modalOverlay').classList.remove('hidden');
+        document.getElementById('pickModal').classList.remove('hidden');
+    }
+
+    function closePickModal() {
+        document.getElementById('modalOverlay').classList.add('hidden');
+        document.getElementById('pickModal').classList.add('hidden');
+    }
+
+    function openDateModal() {
+        document.getElementById('datePickerModal').classList.remove('hidden');
+        document.getElementById('pickModal').classList.add('hidden');
+    }
+
+    function closeDateModal() {
+        document.getElementById('datePickerModal').classList.add('hidden');
+        document.getElementById('pickModal').classList.remove('hidden');
+    }
+
+    function openTimeModal() {
+        document.getElementById('timePickerModal').classList.remove('hidden');
+        document.getElementById('pickModal').classList.add('hidden');
+    }
+
+    function closeTimeModal() {
+        document.getElementById('pickModal').classList.remove('hidden');
+        document.getElementById('timePickerModal').classList.add('hidden');
+    }
+
+    // Event listener to close modal when clicking outside it
+    document.getElementById('modalOverlay').addEventListener('click', closePickModal);
+</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="https://kit.fontawesome.com/9666623c61.js" crossorigin="anonymous"></script>
+    <title>TL - TaskConfirm</title>
+</head>
+<body class="h-full">
+
+<header class="hidden lg:block fixed top-0 w-full">
+    <nav class="bg-fondocamps shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="../../public/index.html" class="text-3xl font-bold text-secundari">TaskLoop</a>
+
+            <!-- Links de Navegació -->
+            <div class="flex space-x-8">
+                <a href="../../public/index.html" class="flex items-center space-x-2 text-secundari">
+                    <i class="fa-solid fa-house text-xl"></i>
+                    <span class="text-sm font-semibold">Inici</span>
+                </a>
+
+                <a href="#" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+                    <i class="fa-solid fa-briefcase text-xl"></i>
+                    <span class="text-sm font-semibold">Feines</span>
+                </a>
+
+                <a href="#" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+                    <i class="fa-solid fa-heart text-xl"></i>
+                    <span class="text-sm font-semibold">Favorits</span>
+                </a>
+
+                <a href="profile.html" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+                    <i class="fa-solid fa-user text-xl"></i>
+                    <span class="text-sm font-semibold">Perfil</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="hidden lg:flex h-dvh">
+    <section class="w-2/3 h-1/2 flex m-auto ">
+        <!-- Time and Date Section -->
+        <div class="bg-fondocamps shadow-lg w-3/4 m-auto p-4 space-y-5 rounded-lg h-full flex flex-col">
+            <section class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                <div class="flex-1">
+                    <h3 class="text-sm font-semibold text-terciari">Data i Hora</h3>
+                    <div class="flex items-center mt-2 space-x-2 text-gray-500 text-sm">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>Friday - May 27, 2022</span>
+                    </div>
+                    <div class="flex items-center mt-1 space-x-2 text-gray-500 text-sm">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>9.30 am</span>
+                    </div>
+                </div>
+                <div class="flex flex-col align-middle">
+                    <img src="../Assets/pf1.jpg" alt="Dianne Russell" class="w-16 h-16 rounded-full ml-4">
+                    <p class="text-terciari">Dianne Russell</p>
+                </div>
+            </section>
+
+            <!-- Price Details Section -->
+            <section class="bg-white p-4 rounded-lg shadow-sm space-y-4">
+                <h3 class="text-sm font-semibold text-terciari">Detalls</h3>
+                <div class="flex justify-between text-gray-600 text-sm">
+                    <span>Preu per hora</span>
+                    <span>$18/hr</span>
+                </div>
+                <div class="flex justify-between text-gray-600 text-sm">
+                    <span>Taxa de suport</span>
+                    <span>$10</span>
+                </div>
+            </section>
+
+            <!-- Total Rate Section -->
+            <section class="bg-white p-4 rounded-lg shadow-sm space-y-4 flex-grow">
+                <h3 class="text-sm font-semibold text-terciari">Total Rate</h3>
+                <div class="flex justify-between items-center text-lg font-semibold text-gray-800">
+                    <span>Total</span>
+                    <span>$28</span>
+                </div>
+                <p class="text-xs text-gray-500 leading-5">
+                    Your payment method may temporarily show a hold in the amount of $15 per hour, which is the rate of
+                    your Tasker. You have the option to cancel anytime. However, cancellations made less than 24 hours
+                    before the scheduled start time may incur a cancellation fee equivalent to one hour of service.
+                </p>
+            </section>
+        </div>
+    </section>
+
+    <aside class="w-1/3 h-1/2 m-auto flex flex-col space-y-12">
+        <div class=" w-3/4 m-auto  space-y-5  h-full ">
+            <!-- Payment and Promo Section -->
+            <div class="h-fit bg-fondocamps p-4 rounded-lg shadow-md">
+                <section class="bg-white p-4 rounded-lg shadow-sm space-y-4 w-full flex-grow">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-terciari font-semibold">Pagament</span>
+                        <a href="#" class="text-secundari text-sm font-semibold">Afegeix mètode de pagament</a>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-terciari font-semibold">Promos</span>
+                        <a href="#" class="text-secundari text-sm font-semibold">Afegeix codi promocional</a>
+                    </div>
+
+                    <!-- Confirm and Chat Button -->
+                    <button onclick="openModal()"
+                            class="w-full bg-secundari text-white py-3 rounded-full font-semibold text-center">
+                        Confirm and Chat
+                    </button>
+                </section>
+            </div>
+        </div>
+    </aside>
+</main>
+
+
+
+<!-- Header -->
+<header class="flex items-center justify-between p-4 bg-fondocamps lg:hidden">
+    <a href="task_details.html" class="text-terciari text-lg">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <h2 class="text-lg text-terciari font-semibold">Revisar i confirmar</h2>
+    <span></span>
+</header>
+
+<!-- Main Content -->
+<main class="p-4 space-y-6 lg:hidden">
+    <!-- Time and Date Section -->
+    <section class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+        <div class="flex-1">
+            <h3 class="text-sm font-semibold text-terciari">Data i Hora</h3>
+            <div class="flex items-center mt-2 space-x-2 text-gray-500 text-sm">
+                <i class="fa-regular fa-calendar"></i>
+                <span>Friday - May 27, 2022</span>
+            </div>
+            <div class="flex items-center mt-1 space-x-2 text-gray-500 text-sm">
+                <i class="fa-regular fa-clock"></i>
+                <span>9.30 am</span>
+            </div>
+        </div>
+        <div class="flex flex-col align-middle ">
+            <img src="../Assets/pf1.jpg" alt="Dianne Russell" class="w-16 h-16 rounded-full ml-4">
+            <p class="text-terciari">Dianne Russell</p>
+        </div>
+    </section>
+
+    <!-- Payment and Promo Section -->
+    <section class="bg-white p-4 rounded-lg shadow-sm space-y-4">
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-terciari font-semibold">Pagament</span>
+            <a href="#" class="text-secundari text-sm font-semibold">Afegeix mètode de pagament</a>
+        </div>
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-terciari font-semibold">Promos</span>
+            <a href="#" class="text-secundari text-sm font-semibold">Afegeix codi promocional</a>
+        </div>
+    </section>
+
+    <!-- Price Details Section -->
+    <section class="bg-white p-4 rounded-lg shadow-sm space-y-4">
+        <h3 class="text-sm font-semibold text-terciari">Detalls</h3>
+        <div class="flex justify-between text-gray-600 text-sm">
+            <span>Preu per hora</span>
+            <span>$18/hr</span>
+        </div>
+        <div class="flex justify-between text-gray-600 text-sm">
+            <span>Taxa de suport</span>
+            <span>$10</span>
+        </div>
+    </section>
+
+    <!-- Total Rate Section -->
+    <section class="bg-white p-4 rounded-lg shadow-sm space-y-4">
+        <h3 class="text-sm font-semibold text-terciari">Total Rate</h3>
+        <div class="flex justify-between items-center text-lg font-semibold text-gray-800">
+            <span>Total</span>
+            <span>$28</span>
+        </div>
+        <p class="text-xs text-gray-500 leading-5">
+            Your payment method may temporarily show a hold in the amount of $15 per hour, which is the rate of your Tasker. You have the option to cancel anytime. However, cancellations made less than 24 hours before the scheduled start time may incur a cancellation fee equivalent to one hour of service.
+        </p>
+    </section>
+
+    <!-- Confirm and Chat Button -->
+    <button onclick="openModal()" class="w-full bg-secundari text-white py-3 rounded-full font-semibold text-center">
+        Confirm and Chat
+    </button>
+</main>
+
+<!-- Modal Overlay (Background) -->
+<div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+<!-- Centered Modal Content -->
+<div id="confirmationModal" class="fixed inset-0 flex items-center justify-center hidden z-50">
+    <div class="bg-fondocamps rounded-2xl shadow-lg w-10/12 max-w-sm p-6 text-center">
+        <!-- Profile Image -->
+        <img src="../Assets/pf1.jpg" alt="Dianne Russell" class="w-16 h-16 rounded-full mx-auto mb-4">
+
+        <!-- Modal Title -->
+        <h3 class="text-lg font-semibold text-terciari">You are booking Dianne Russell</h3>
+
+        <!-- Modal Message -->
+        <p class="text-sm text-gray-600 mt-2">
+            Discover additional services offered by your favorite Tasker, or assemble a team of your preferred Taskers under the My Taskers section.
+        </p>
+
+        <!-- Continue Button -->
+        <button onclick="closeModal()" class="w-full bg-secundari text-white py-3 rounded-full font-semibold mt-6">
+            Continue
+        </button>
+    </div>
+</div>
+
+<script>
+    function openModal() {
+        document.getElementById('modalOverlay').classList.remove('hidden');
+        document.getElementById('confirmationModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+        document.getElementById('modalOverlay').classList.add('hidden');
+        document.getElementById('confirmationModal').classList.add('hidden');
+    }
+
+    // Optional: Close modal when clicking on the overlay background
+    document.getElementById('modalOverlay').addEventListener('click', closeModal);
+</script>
+
+</body>
+</html>

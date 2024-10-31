@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="https://kit.fontawesome.com/9666623c61.js" crossorigin="anonymous"></script>
+    <title>TL - TaskDetails</title>
+</head>
+<body class="h-full">
+
+<header class="hidden lg:block fixed top-0 w-full">
+    <nav class="bg-fondocamps shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="../../public/index.html" class="text-3xl font-bold text-secundari">TaskLoop</a>
+
+            <!-- Links de Navegació -->
+            <div class="flex space-x-8">
+                <a href="../../public/index.html" class="flex items-center space-x-2 text-secundari">
+                    <i class="fa-solid fa-house text-xl"></i>
+                    <span class="text-sm font-semibold">Inici</span>
+                </a>
+
+                <a href="#" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+                    <i class="fa-solid fa-briefcase text-xl"></i>
+                    <span class="text-sm font-semibold">Feines</span>
+                </a>
+
+                <a href="#" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+                    <i class="fa-solid fa-heart text-xl"></i>
+                    <span class="text-sm font-semibold">Favorits</span>
+                </a>
+
+                <a href="profile.html" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+                    <i class="fa-solid fa-user text-xl"></i>
+                    <span class="text-sm font-semibold">Perfil</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="hidden lg:flex  ">
+    <section class="w-full">
+        <!-- Profile and Intro Section -->
+        <section class="w-4/6 m-auto flex items-center space-x-4 h-dvh">
+            <div class="flex   w-full justify-center  text-terciari text-md font-medium">
+                <div class="flex m-auto justify-center bg-fondocamps py-10 rounded-2xl space-x-10 shadow-md">
+                    <img src="../Assets/pf1.jpg" alt="Dianne Russell" class="w-2/6 h-96 rounded-3xl">
+                    <div class="flex flex-col text-left space-y-4 h-96 p-4">
+                        <p class="text-3xl text-terciari font-bold">Dianne Russel</p>
+                        <div>
+                            <h3 class="text-lg font-semibold text-terciari">Comença la conversació</h3>
+                            <p class="text-sm text-gray-600 mt-1">Quasi bé estàs! Comparteix alguns detalls més per
+                                preparar
+                                el treballador per la feina.</p>
+                        </div>
+                        <div class="flex-grow flex flex-col">
+                        <textarea
+                                class="w-full flex-grow border border-gray-300 rounded-lg p-3 text-sm text-gray-800 resize-none focus:outline-none focus:border-green-600"
+                                placeholder="Escriu alguna cosa..."></textarea>
+                        </div>
+
+                        <!-- Review Task Button -->
+                        <a href="task_confirm.html"
+                           class="w-full block bg-green-700 text-white py-3 rounded-full font-semibold text-center">
+                            Revisar Tasca
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </section>
+</main>
+
+<!-- Header -->
+<header class="flex items-center justify-between p-4 bg-fondocamps lg:hidden">
+    <a href="worker_profile.html" class="text-terciari text-lg">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <h2 class="text-lg text-terciari font-semibold">Task Details</h2>
+    <span></span>
+</header>
+
+<!-- Main Content -->
+<main class="p-4 lg:hidden">
+    <!-- Profile and Intro Section -->
+    <section class="flex items-start space-x-4 mb-6">
+        <div class="flex flex-col text-center space-y-2 text-terciari text-md font-medium">
+            <img src="../Assets/pf1.jpg" alt="Dianne Russell" class="w-16 h-16 rounded-full">
+            <p>Dianne Russel</p>
+        </div>
+        <div>
+            <h3 class="text-lg font-semibold text-terciari">Start the conversation</h3>
+            <p class="text-sm text-gray-600 mt-1">Quasi bé estàs! Comparteix alguns detalls més per preparar el treballador per la feina. </p>
+        </div>
+    </section>
+
+    <!-- Input Box -->
+    <div class="mb-6">
+        <textarea
+                class="w-full min-h-auto h-[65vh]  border border-gray-300 rounded-lg p-3 text-sm text-gray-800 resize-none focus:outline-none focus:border-green-600"
+                placeholder="Escriu alguna cosa..."></textarea>
+    </div>
+
+    <!-- Review Task Button -->
+    <a href="task_confirm.html" class="w-full block bg-green-700 text-white py-3 rounded-full font-semibold text-center ">
+        Revisar Tasca
+    </a>
+</main>
+
+</body>
+</html>
