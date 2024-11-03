@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    './public/**/*.html',      // Includes all HTML files in public folder
-    './public/**/*.{js,ts}',   // Includes all JavaScript and TypeScript files
-  ],
+  content: ["./public/**/*.html", "./index.html"],
   theme: {
     extend: {
       colors: {
