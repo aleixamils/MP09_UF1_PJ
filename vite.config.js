@@ -1,13 +1,16 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    root: './public', // Set public as root
+    base: './', // Ensures that all paths in the built files are relative
+    root: './public', // Specifies the public directory as root
     build: {
-        outDir: '../dist', // Output directory for build
-        emptyOutDir: true, // Ensure clean build by clearing the output directory
+        outDir: '../dist', // Output directory with relative path from public
+        emptyOutDir: true, // Clears the output directory before building
     },
     server: {
-        open: true, // Opens in the browser when starting the server
+        open: true,
     },
 });
+
+
 

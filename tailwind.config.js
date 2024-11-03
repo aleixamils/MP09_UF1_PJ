@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    './public/**/*.html', // Scans all HTML files in public for Tailwind classes
+    './public/**/*.html',      // Includes all HTML files in public folder
+    './public/**/*.{js,ts}',   // Includes all JavaScript and TypeScript files
   ],
   theme: {
     extend: {
@@ -14,5 +15,4 @@ export default {
     },
   },
   plugins: [],
-}
-
+};
