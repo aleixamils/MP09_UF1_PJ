@@ -5,7 +5,7 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--<link rel="stylesheet" href="style.css">-->
-  <script type="module" src="main.js"></script>
+  <script type="module" src="src/js/main.js"></script>
   <script src="https://kit.fontawesome.com/9666623c61.js" crossorigin="anonymous"></script>
   <title>TaskLoop</title>
 </head>
@@ -35,7 +35,7 @@
           <span class="text-sm font-semibold">Favorits</span>
         </a>
 
-        <a href="profile.html" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
+        <a href="src/pages/profile.html" class="flex items-center space-x-2 text-terciari hover:text-blue-600 transition duration-200">
           <i class="fa-solid fa-user text-xl"></i>
           <span class="text-sm font-semibold">Perfil</span>
         </a>
@@ -57,7 +57,7 @@
     <!-- Banner -->
     <div class="p-4 w-3/4 m-auto">
       <div class="relative bg-blue-100 rounded-lg overflow-hidden shadow-md">
-        <img src="/Assets/car_wash.jpg" alt="Car Wash" class="w-full h-100 object-contain">
+        <img src="/src/assets/car_wash.jpg" alt="Car Wash" class="w-full h-100 object-contain">
         <div class="absolute bottom-5 left-2 bg-secundari text-accentuacio py-1 px-2 rounded-3xl">
           Reserva ara
         </div>
@@ -76,7 +76,7 @@
         <!-- Ajust de graella responsiva per a tablet i escriptori -->
         <div class="mt-2 flex space-x-4  md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-x-0 no-scrollbar">
           <div class="bg-white p-4 rounded-lg w-48 md:w-auto">
-            <img src="Assets/pf1.jpg" alt="Profile" class="w-full rounded-lg">
+            <img src="src/assets/pf1.jpg" alt="Profile" class="w-full rounded-lg">
             <div class="flex justify-between mt-2 items-center">
               <p class="font-semibold text-base">Pere Pernils</p>
               <p class="text-sm font-semibold text-gray-500">18€/hr</p>
@@ -87,7 +87,7 @@
             </p>
           </div>
           <div class="bg-white p-4 rounded-lg w-48 md:w-auto">
-            <img src="/Assets/pf2.jpg" alt="Profile" class="w-full rounded-lg">
+            <img src="/src/assets/pf2.jpg" alt="Profile" class="w-full rounded-lg">
             <div class="flex justify-between mt-2 items-center">
               <p class="font-semibold text-base">Pere Pernils</p>
               <p class="text-sm font-semibold text-gray-500">18€/hr</p>
@@ -169,7 +169,7 @@
 <!-- Banner -->
 <div class="p-4 lg:hidden">
   <div class="relative bg-blue-100 rounded-lg overflow-hidden">
-    <img src="/Assets/car_wash.jpg" alt="Car Wash" class="w-full h-100 object-contain">
+    <img src="/src/assets/car_wash.jpg" alt="Car Wash" class="w-full h-100 object-contain">
     <div class="absolute bottom-5 left-2 bg-secundari text-accentuacio py-1 px-2 rounded-3xl">
       Reserva ara
     </div>
@@ -215,7 +215,7 @@
   <!-- Ajust de graella responsiva per a tablet i escriptori -->
   <div class="mt-2 flex space-x-4 overflow-x-scroll md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-x-0 no-scrollbar">
     <div class="bg-fondocamps p-4 rounded-lg w-48 md:w-auto">
-      <img src="/Assets/pf1.jpg" alt="Profile" class="w-full rounded-lg">
+      <img src="/src/assets/pf1.jpg" alt="Profile" class="w-full rounded-lg">
       <div class="flex justify-between mt-2 items-center">
         <p class="font-semibold text-base">Pere Pernils</p>
         <p class="text-sm font-semibold text-gray-500">18€/hr</p>
@@ -226,7 +226,7 @@
       </p>
     </div>
     <div class="bg-fondocamps p-4 rounded-lg w-48 md:w-auto">
-      <img src="/Assets/pf2.jpg" alt="Profile" class="w-full rounded-lg">
+      <img src="/src/assets/pf2.jpg" alt="Profile" class="w-full rounded-lg">
       <div class="flex justify-between mt-2 items-center">
         <p class="font-semibold text-base">Pere Pernils</p>
         <p class="text-sm font-semibold text-gray-500">18€/hr</p>
@@ -264,7 +264,7 @@
     <i class="fa-solid fa-heart text-xl"></i>
     <span class="text-xs">Favorits</span>
   </a>
-  <a href="profile.html" class="flex flex-col items-center text-gray-500">
+  <a href="src/pages/profile.html" class="flex flex-col items-center text-gray-500">
     <i class="fa-solid fa-user text-xl"></i>
     <span class="text-xs">Perfil</span>
   </a>
@@ -418,9 +418,9 @@
     <div class="">
       <!-- Worker Card Example -->
       <div class="flex flex-col p-4 ">
-        <a href="worker_profile.html">
+        <a href="src/pages/worker_profile.html">
           <div class="flex items-start space-x-4  ">
-            <img src="/Assets/pf1.jpg" alt="Profile" class="w-28 h-24 rounded-md">
+            <img src="/src/assets/pf1.jpg" alt="Profile" class="w-28 h-24 rounded-md">
             <div class=" w-full">
               <div class="flex justify-between">
                 <h3 class="text-lg font-semibold text-gray-800">Pere Pernils</h3>
@@ -448,7 +448,7 @@
 
       <div class="flex flex-col p-4 ">
         <div class="flex items-start space-x-4  ">
-          <img src="/Assets/pf1.jpg" alt="Profile" class="w-28 h-24 rounded-md">
+          <img src="/src/assets/pf1.jpg" alt="Profile" class="w-28 h-24 rounded-md">
           <div class=" w-full">
             <div class="flex justify-between">
               <h3 class="text-lg font-semibold text-gray-800">Pere Pernils</h3>
@@ -474,7 +474,7 @@
 
       <div class="flex flex-col p-4 ">
         <div class="flex items-start space-x-4  ">
-          <img src="/Assets/pf1.jpg" alt="Profile" class="w-28 h-24 rounded-md">
+          <img src="/src/assets/pf1.jpg" alt="Profile" class="w-28 h-24 rounded-md">
           <div class=" w-full">
             <div class="flex justify-between">
               <h3 class="text-lg font-semibold text-gray-800">Pere Pernils</h3>
