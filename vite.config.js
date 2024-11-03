@@ -1,16 +1,13 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-    root: "./public", // Root directory for Vite
+    root: './public', // Set public as root
     build: {
-        outDir: "../dist", // Output directory for the build
-        rollupOptions: {
-            input: "./public/index.html", // Entry point for the build
-        },
+        outDir: '../dist', // Output directory for build
+        emptyOutDir: true, // Ensure clean build by clearing the output directory
     },
     server: {
-        watch: {
-            usePolling: true, // Ensures changes are detected in some environments
-        },
+        open: true, // Opens in the browser when starting the server
     },
 });
+
