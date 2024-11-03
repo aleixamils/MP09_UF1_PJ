@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-    base: "./",
     root: "./public", // Root directory for Vite
     server: {
         watch: {
