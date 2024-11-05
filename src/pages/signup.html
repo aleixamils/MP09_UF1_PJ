@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskLoop - Registre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white flex items-center justify-center min-h-screen">
+    <!-- Barra superior -->
+    <div
+      class="absolute top-0 left-0 w-full flex justify-between items-center px-6 py-4 bg-green-800 text-white text-xl lg:text-2xl"
+    >
+      <a href="#" class="hover:underline">← Iniciar Sessió</a>
+      <a href="#" class="hover:underline">Saltar</a>
+    </div>
+
+    <!-- Contenidor principal -->
+    <div
+      class="flex flex-col items-center text-center space-y-10 w-full max-w-md mx-auto mt-28 lg:mt-32 xl:mt-40 px-8"
+    >
+      <!-- Títol -->
+      <h1 class="text-6xl font-bold text-green-800 md:text-7xl lg:text-8xl">
+        TaskLoop
+      </h1>
+
+      <!-- Formulari de registre -->
+      <form class="flex flex-col space-y-8 w-full">
+        <!-- Camp Nom complet -->
+        <div class="flex flex-col">
+          <label class="text-left text-gray-400 text-lg lg:text-xl"
+            >Nom complet</label
+          >
+          <input
+            type="text"
+            class="border-b-2 border-gray-300 focus:outline-none focus:border-green-800 text-gray-700 text-2xl py-3"
+          />
+        </div>
+
+        <!-- Camp Número de Telèfon -->
+        <div class="flex flex-col">
+          <label class="text-left text-gray-400 text-lg lg:text-xl"
+            >Núm. Telèfon</label
+          >
+          <input
+            type="tel"
+            class="border-b-2 border-gray-300 focus:outline-none focus:border-green-800 text-gray-700 text-2xl py-3"
+          />
+        </div>
+
+        <!-- Camp Contrasenya amb icona -->
+        <div class="flex flex-col relative">
+          <label class="text-left text-gray-400 text-lg lg:text-xl"
+            >Contrasenya</label
+          >
+          <input
+            type="password"
+            class="border-b-2 border-gray-300 focus:outline-none focus:border-green-800 text-gray-700 text-2xl py-3"
+          />
+          <button type="button" class="absolute right-0 bottom-3 text-gray-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7 lg:h-8 lg:w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 12l-3 3m0-3l3-3m-3 3H6"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Camp Confirma Contrasenya amb icona -->
+        <div class="flex flex-col relative">
+          <label class="text-left text-gray-400 text-lg lg:text-xl"
+            >Confirma contrasenya</label
+          >
+          <input
+            type="password"
+            class="border-b-2 border-gray-300 focus:outline-none focus:border-green-800 text-gray-700 text-2xl py-3"
+          />
+          <button type="button" class="absolute right-0 bottom-3 text-gray-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7 lg:h-8 lg:w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 12l-3 3m0-3l3-3m-3 3H6"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Botó de Registre -->
+        <button
+          type="submit"
+          class="bg-green-800 text-white py-4 rounded-md font-semibold text-2xl md:text-3xl lg:text-4xl"
+        >
+          Registra’t
+        </button>
+      </form>
+
+      <!-- Enllaç de Inicia Sessió -->
+      <p class="text-gray-600 text-lg md:text-xl lg:text-2xl">
+        Ja tens compte?
+        <a href="#" class="text-green-800 font-semibold hover:underline"
+          >Inicia Sessió</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Completed</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 h-screen flex flex-col font-sans">
+    <div class="bg-green-50 p-4 h-screen flex flex-col justify-between">
+      <!-- Header -->
+      <div class="flex justify-between items-center mb-4">
+        <h1 class="text-lg font-semibold">Safata d'entrada</h1>
+        <div class="text-green-700">
+          <i class="fas fa-gift"></i>
+          <!-- Icon for the gift, replace with actual icon -->
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex justify-between border-b-2 border-gray-300 mb-6">
+        <button class="font-semibold border-b-2 border-black px-4 py-2">
+          Programat
+        </button>
+        <button class="px-4 py-2">Completat</button>
+      </div>
+
+      <!-- Empty State Content -->
+      <div
+        class="flex flex-col items-center justify-center flex-grow text-center space-y-4"
+      >
+        <!-- Placeholder Icon (Replace with actual image if available) -->
+        <div class="relative mb-4">
+          <div
+            class="w-16 h-16 bg-green-100 rounded-lg shadow-md absolute left-4"
+          ></div>
+          <div class="w-16 h-16 bg-green-50 rounded-lg shadow-md"></div>
+        </div>
+
+        <p class="text-lg font-semibold text-gray-700">
+          Actualment no hi ha tasques disponibles
+        </p>
+        <p class="text-sm text-gray-500">
+          Ajuda’ns a fer-te la feina. Reserva una feina i la veuràs aquí.
+        </p>
+      </div>
+
+      <!-- Button -->
+      <div class="mb-4">
+        <button class="bg-green-700 text-white w-full py-2 rounded-lg">
+          Cerca un treballador
+        </button>
+      </div>
+
+      <!-- Bottom Navigation -->
+      <div
+        class="flex justify-between items-center text-gray-500 text-sm px-4 py-2"
+      >
+        <button class="flex flex-col items-center">
+          <i class="fas fa-home"></i>
+          <span>Inici</span>
+        </button>
+        <button class="flex flex-col items-center text-green-700">
+          <i class="fas fa-envelope"></i>
+          <span>Missatges</span>
+        </button>
+        <button class="flex flex-col items-center">
+          <i class="fas fa-heart"></i>
+          <span>Favorits</span>
+        </button>
+        <button class="flex flex-col items-center">
+          <i class="fas fa-user"></i>
+          <span>Perfil</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

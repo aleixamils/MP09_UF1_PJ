@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Completed</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 h-screen flex flex-col font-sans">
+    <!-- Header -->
+    <header
+      class="bg-green-800 text-white flex justify-between items-center p-4"
+    >
+      <h1 class="text-lg font-semibold">Safata d'entrada</h1>
+      <div class="text-white">
+        <span class="fas fa-gift"></span>
+      </div>
+    </header>
+    <div class="bg-green-50 p-4 h-screen">
+      <div class="flex justify-between items-center mb-4">
+        <h1 class="text-lg font-semibold">Safata d'entrada</h1>
+        <div class="text-green-700">
+          <i class="fas fa-gift"></i>
+        </div>
+      </div>
+
+      <div class="flex justify-between border-b-2 border-gray-300 mb-4">
+        <button class="font-semibold border-b-2 border-black px-4 py-2">
+          Informació
+        </button>
+        <button class="px-4 py-2">Xat</button>
+      </div>
+
+      <div class="space-y-4 text-gray-800">
+        <div class="flex items-center space-x-2 mb-4">
+          <img
+            src="./imgPantalla/fotoperfil.jpg"
+            alt="Profile"
+            class="w-8 h-8 rounded-full"
+          />
+          <div>
+            <p class="font-semibold">Has reservat a Dianne</p>
+            <p class="text-gray-500">Offline.</p>
+          </div>
+        </div>
+
+        <div class="text-gray-600">
+          <p class="font-semibold mb-1">Details</p>
+          <p class="text-sm">Divendres - May 27, 2022</p>
+          <p class="text-sm mb-4">9.30 am</p>
+          <p class="text-sm">
+            Preu/Hora: <span class="font-semibold">10€/hr</span>
+          </p>
+          <p class="text-sm">Taxes: <span class="font-semibold">10€</span></p>
+          <p class="text-sm">
+            Total Rate: <span class="font-semibold">28€</span>
+          </p>
+          <p class="text-sm">
+            Ubicació: <span class="font-semibold">San Francisco, CA</span>
+          </p>
+          <p class="text-sm">Notes...</p>
+        </div>
+
+        <button class="bg-green-700 text-white w-full py-2 rounded-lg mt-4">
+          Calificar i propines
+        </button>
+      </div>
+
+      <!-- Bottom Navigation -->
+      <nav
+        class="bg-white border-t border-gray-300 p-2 flex justify-around text-gray-600 text-base"
+      >
+        <div class="flex flex-col items-center space-y-1">
+          <span class="fas fa-home"></span>
+          <span>Inici</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1 text-green-800">
+          <span class="fas fa-comments"></span>
+          <span>Missatges</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1">
+          <span class="fas fa-heart"></span>
+          <span>Favorits</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1">
+          <span class="fas fa-user"></span>
+          <span>Perfil</span>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>

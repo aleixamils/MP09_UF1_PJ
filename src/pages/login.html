@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskLoop - Inici de Sessió</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white flex items-center justify-center h-screen">
+    <!-- Contenidor principal -->
+    <div
+      class="flex flex-col items-center text-center space-y-8 w-full max-w-xs md:max-w-md lg:max-w-lg mx-auto"
+    >
+      <!-- Títol -->
+      <h1 class="text-5xl font-bold text-green-800 md:text-6xl lg:text-7xl">
+        TaskLoop
+      </h1>
+
+      <!-- Formulari de login -->
+      <form class="flex flex-col space-y-6 w-full px-8">
+        <!-- Camp Número de Telèfon -->
+        <div class="flex flex-col">
+          <label class="text-left text-gray-400 text-sm lg:text-base"
+            >Núm. Telèfon</label
+          >
+          <input
+            type="tel"
+            class="border-b-2 border-gray-300 focus:outline-none focus:border-green-800 text-gray-700 text-lg py-2"
+          />
+        </div>
+
+        <!-- Camp Contrasenya amb icona -->
+        <div class="flex flex-col relative">
+          <label class="text-left text-gray-400 text-sm lg:text-base"
+            >Contrasenya</label
+          >
+          <input
+            type="password"
+            class="border-b-2 border-gray-300 focus:outline-none focus:border-green-800 text-gray-700 text-lg py-2"
+          />
+          <button type="button" class="absolute right-0 bottom-2 text-gray-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 lg:h-7 lg:w-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 12l-3 3m0-3l3-3m-3 3H6"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Botó d'Iniciar Sessió -->
+        <button
+          type="submit"
+          class="bg-green-800 text-white py-3 rounded-md font-semibold text-lg md:text-xl lg:text-2xl"
+        >
+          Inicia Sessió
+        </button>
+
+        <!-- Enllaç de Contrasenya Oblidada -->
+        <a href="#" class="text-green-800 text-sm md:text-base lg:text-lg"
+          >Contrasenya oblidada?</a
+        >
+      </form>
+
+      <!-- Enllaç de Registre -->
+      <p class="text-gray-600 text-sm md:text-base lg:text-lg">
+        No tens compte?
+        <a href="#" class="text-green-800 font-semibold">Registra’t</a>
+      </p>
+    </div>
+  </body>
+</html>
