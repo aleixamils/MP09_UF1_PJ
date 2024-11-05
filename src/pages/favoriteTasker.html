@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taskers Favorits</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script src="https://kit.fontawesome.com/9666623c61.js" crossorigin="anonymous"></script>
   </head>
   <body class="bg-gray-50 font-sans">
     <div class="max-w-2xl mx-auto p-8">
@@ -41,24 +42,23 @@
       </div>
 
       <!-- Bottom Navigation -->
-      <nav
-        class="fixed bottom-0 left-0 right-0 bg-gray-100 py-5 flex justify-around items-center border-t text-xl"
-      >
-        <a href="#" class="flex flex-col items-center text-teal-600">
-          <span>🏠</span>
-          <span class="text-lg">Inici</span>
+      <!-- Bottom Navigation -->
+      <nav class="fixed bottom-0 left-0 right-0 bg-white p-4 flex justify-between items-center shadow-t lg:hidden">
+        <a href="#" class="flex flex-col items-center text-secundari">
+          <i class="fa-solid fa-house text-xl py-1 px-4 bg-fondocamps rounded-3xl"></i>
+          <span class="text-xs">Inici</span>
         </a>
-        <a href="#" class="flex flex-col items-center text-teal-600">
-          <span>💬</span>
-          <span class="text-lg">Missatges</span>
+        <a href="#" class="flex flex-col items-center text-gray-500">
+          <i class="fa-solid fa-briefcase text-xl"></i>
+          <span class="text-xs">Feines</span>
         </a>
-        <a href="#" class="flex flex-col items-center text-teal-600">
-          <span>❤️</span>
-          <span class="text-lg">Favorits</span>
+        <a href="#" class="flex flex-col items-center text-gray-500">
+          <i class="fa-solid fa-heart text-xl"></i>
+          <span class="text-xs">Favorits</span>
         </a>
-        <a href="#" class="flex flex-col items-center text-teal-600">
-          <span>👤</span>
-          <span class="text-lg">Perfil</span>
+        <a href="src/pages/profile.html" class="flex flex-col items-center text-gray-500">
+          <i class="fa-solid fa-user text-xl"></i>
+          <span class="text-xs">Perfil</span>
         </a>
       </nav>
     </div>
