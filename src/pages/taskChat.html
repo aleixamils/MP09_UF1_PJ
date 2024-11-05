@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 h-screen flex flex-col font-sans">
+    <!-- Header -->
+    <header
+      class="bg-green-800 text-white flex justify-between items-center p-4"
+    >
+      <h1 class="text-lg font-semibold">Task</h1>
+      <div class="flex space-x-4">
+        <a href="#" class="text-white">Task Info</a>
+        <a href="#" class="text-white">Chat</a>
+      </div>
+    </header>
+
+    <!-- Date -->
+    <div class="flex justify-center py-2">
+      <span class="text-gray-500 text-sm">May 27, 2022</span>
+    </div>
+
+    <!-- Chat Messages -->
+    <main class="flex-grow px-4 space-y-4 overflow-y-auto">
+      <!-- User message -->
+      <div class="flex justify-end">
+        <div class="bg-green-800 text-white p-3 rounded-lg max-w-xs">
+          <p>Good morning</p>
+        </div>
+      </div>
+
+      <!-- Other person's message -->
+      <div class="flex items-start space-x-2">
+        <img
+          src="./imgPantalla/fotoperfil.jpg"
+          alt="Avatar"
+          class="w-10 h-10 rounded-full"
+        />
+        <div class="bg-white p-3 rounded-lg shadow-md max-w-xs">
+          <p>Good morning, how can I help you today?</p>
+        </div>
+      </div>
+
+      <!-- User message -->
+      <div class="flex justify-end">
+        <div class="bg-green-800 text-white p-3 rounded-lg max-w-xs">
+          <p>I have a leaky faucet in my kitchen that needs fixing.</p>
+        </div>
+      </div>
+
+      <!-- Other person's message -->
+      <div class="flex items-start space-x-2">
+        <img
+          src="./imgPantalla/fotoperfil.jpg"
+          alt="Avatar"
+          class="w-10 h-10 rounded-full"
+        />
+        <div class="bg-white p-3 rounded-lg shadow-md max-w-xs">
+          <p>
+            Okay, I can schedule an appointment for you. What date and time
+            works best for you?
+          </p>
+        </div>
+      </div>
+
+      <!-- User message -->
+      <div class="flex justify-end">
+        <div class="bg-green-800 text-white p-3 rounded-lg max-w-xs">
+          <p>How about next Tuesday at 2 PM?</p>
+        </div>
+      </div>
+
+      <!-- Other person's message -->
+      <div class="flex items-start space-x-2">
+        <img
+          src="./imgPantalla/fotoperfil.jpg"
+          alt="Avatar"
+          class="w-10 h-10 rounded-full"
+        />
+        <div class="bg-white p-3 rounded-lg shadow-md max-w-xs">
+          <p>
+            That works, I have availability at 2 PM on Tuesday. Can I have your
+            address and contact information to schedule the appointment?
+          </p>
+        </div>
+      </div>
+
+      <!-- User message -->
+      <div class="flex justify-end">
+        <div class="bg-green-800 text-white p-3 rounded-lg max-w-xs">
+          <p>Sure, my address is 123 Main Street</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Message Input -->
+    <footer
+      class="p-4 border-t border-gray-300 bg-white flex items-center space-x-4"
+    >
+      <button class="text-gray-500"><i class="fas fa-paperclip"></i></button>
+      <input
+        type="text"
+        placeholder="Type a Message"
+        class="flex-grow p-2 border rounded-full focus:outline-none focus:ring focus:border-green-800"
+      />
+      <button class="text-green-800"><i class="fas fa-paper-plane"></i></button>
+    </footer>
+
+    <!-- Bottom Navigation -->
+    <nav
+      class="bg-white border-t border-gray-300 p-2 flex justify-around text-gray-600 text-base"
+    >
+      <div class="flex flex-col items-center space-y-1">
+        <span class="fas fa-home"></span>
+        <span>Inici</span>
+      </div>
+      <div class="flex flex-col items-center space-y-1 text-green-800">
+        <span class="fas fa-comments"></span>
+        <span>Missatges</span>
+      </div>
+      <div class="flex flex-col items-center space-y-1">
+        <span class="fas fa-heart"></span>
+        <span>Favorits</span>
+      </div>
+      <div class="flex flex-col items-center space-y-1">
+        <span class="fas fa-user"></span>
+        <span>Perfil</span>
+      </div>
+    </nav>
+  </body>
+</html>
